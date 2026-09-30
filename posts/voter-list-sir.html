@@ -70,6 +70,18 @@
       <li>The Freedom Press — <a href="https://thefreedompress.in/sir-row-congress-says-13-crore-voter-names-deleted/" target="_blank" rel="noopener">SIR row: Congress says 13 crore voter names deleted</a></li>
     </ul>
   </div>
+
+  <div class="share">
+    <span class="lbl">Share this story</span>
+    <a href="https://wa.me/?text=13%20crore%20names%20missing%20from%20voter%20lists%3A%20cleanup%20or%20conspiracy%3F%20%E2%80%94%20via%20minvana%20https%3A%2F%2Fminvana.com%2Fposts%2Fvoter-list-sir.html" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?text=13%20crore%20names%20missing%20from%20voter%20lists%3A%20cleanup%20or%20conspiracy%3F%20%E2%80%94%20via%20minvana&url=https%3A%2F%2Fminvana.com%2Fposts%2Fvoter-list-sir.html" target="_blank" rel="noopener">X</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminvana.com%2Fposts%2Fvoter-list-sir.html" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy-link" data-url="https://minvana.com/posts/voter-list-sir.html">Copy link</button>
+  </div>
+  <nav class="story-nav">
+    <a class="prev" href="opus-55.html"><span class="k">&larr; Newer story</span><span class="t">Claude Opus 5.5 Is Here</span></a>
+    <a class="next" href="upi-mdr.html"><span class="k">Older story &rarr;</span><span class="t">UPI's 0.4% MDR Explained</span></a>
+  </nav>
 </main>
 
 <footer class="site">
@@ -81,6 +93,18 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+document.querySelectorAll('.copy-link').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var u = b.getAttribute('data-url');
+    function done() { b.textContent = 'Copied!'; setTimeout(function(){ b.textContent = 'Copy link'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(u).then(done).catch(done); }
+    else { var t = document.createElement('textarea'); t.value = u; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+  });
+});
+</script>
 
 </body>
 </html>
