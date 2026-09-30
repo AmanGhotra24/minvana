@@ -48,7 +48,7 @@ header.site .wrap {
   display: flex; align-items: center; justify-content: space-between;
   height: 60px;
 }
-.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand { display: inline-flex; align-items: center; gap: 6px; }
 .brand:hover { text-decoration: none; }
 .brand img { height: 26px; width: auto; display: block; }
 .brand img.brand-icon { height: 32px; width: 32px; border-radius: 8px; }
@@ -268,4 +268,38 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
   nav.site a { margin-left: 14px; }
   .minute-row .actions { display: none; }
   .minute-row { gap: 10px; }
+}
+
+/* ---------- signup band ---------- */
+.signup { background: var(--ink); color: #fff; padding: 60px 20px; text-align: center; }
+.signup h2 { font-size: clamp(24px, 4vw, 32px); letter-spacing: -0.02em; margin: 0 0 8px; }
+.signup p.lead { color: #c7cdd8; margin: 0 0 22px; font-size: 17px; }
+.signup form { display: flex; gap: 10px; justify-content: center; max-width: 480px; margin: 0 auto 14px; }
+.signup input[type="email"] { flex: 1; min-width: 0; padding: 14px 16px; border-radius: 12px; border: 1px solid #3a3a3a; background: #1c1c1c; color: #fff; font-size: 16px; }
+.signup input[type="email"]::placeholder { color: #8a8f98; }
+.signup button { padding: 14px 24px; border-radius: 12px; border: 0; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; cursor: pointer; white-space: nowrap; }
+.signup button:hover { background: var(--accent-deep); }
+.signup .fine { font-size: 13px; color: #9aa3b2; margin: 0; }
+.signup .fine a { color: #fff; font-weight: 600; }
+.signup .note { display: none; color: #ffd166; font-size: 14px; margin: 14px 0 0; }
+
+/* ---------- share row ---------- */
+.share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 44px 0 8px; padding-top: 28px; border-top: 1px solid var(--line); }
+.share .lbl { font-weight: 800; margin-right: 4px; }
+.share a, .share button.copy-link { padding: 11px 18px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-size: 14px; font-weight: 700; color: var(--ink); cursor: pointer; text-decoration: none; font-family: inherit; }
+.share a:hover, .share button.copy-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* ---------- story prev/next ---------- */
+.story-nav { display: flex; justify-content: space-between; gap: 14px; margin: 26px 0 10px; }
+.story-nav a { flex: 1; padding: 18px; border: 1px solid var(--line); border-radius: 14px; color: var(--ink); text-decoration: none; }
+.story-nav a:hover { border-color: var(--accent); text-decoration: none; }
+.story-nav a.next { text-align: right; }
+.story-nav .k { display: block; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.story-nav .t { font-weight: 700; font-size: 16px; line-height: 1.4; }
+
+@media (max-width: 600px) {
+  .signup form { flex-direction: column; }
+  .signup button { width: 100%; }
+  .story-nav { flex-direction: column; }
+  .story-nav a.next { text-align: left; }
 }
