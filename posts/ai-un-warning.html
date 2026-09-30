@@ -73,6 +73,18 @@
       <li>Science Times — <a href="http://WWW.SCIENCETIMES.COM/articles/62643/20260924/ai-leaders-urge-un-security-council-address-risks-increasingly-powerful-ai-systems.htm" target="_blank" rel="noopener">AI Leaders Urge UN Security Council to Address Risks From Increasingly Powerful AI Systems</a></li>
     </ul>
   </div>
+
+  <div class="share">
+    <span class="lbl">Share this story</span>
+    <a href="https://wa.me/?text=AI%27s%20own%20creators%20warned%20the%20UN%3A%20we%20could%20lose%20control%20of%20the%20future%20%E2%80%94%20via%20minvana%20https%3A%2F%2Fminvana.com%2Fposts%2Fai-un-warning.html" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?text=AI%27s%20own%20creators%20warned%20the%20UN%3A%20we%20could%20lose%20control%20of%20the%20future%20%E2%80%94%20via%20minvana&url=https%3A%2F%2Fminvana.com%2Fposts%2Fai-un-warning.html" target="_blank" rel="noopener">X</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminvana.com%2Fposts%2Fai-un-warning.html" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy-link" data-url="https://minvana.com/posts/ai-un-warning.html">Copy link</button>
+  </div>
+  <nav class="story-nav">
+    <a class="prev" href="upi-mdr.html"><span class="k">&larr; Newer story</span><span class="t">UPI's 0.4% MDR Explained</span></a>
+    <a class="next" href="panic-selling.html"><span class="k">Older story &rarr;</span><span class="t">Why Investors Panic-Sell at the Bottom</span></a>
+  </nav>
 </main>
 
 <footer class="site">
@@ -84,6 +96,18 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+document.querySelectorAll('.copy-link').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var u = b.getAttribute('data-url');
+    function done() { b.textContent = 'Copied!'; setTimeout(function(){ b.textContent = 'Copy link'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(u).then(done).catch(done); }
+    else { var t = document.createElement('textarea'); t.value = u; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+  });
+});
+</script>
 
 </body>
 </html>
