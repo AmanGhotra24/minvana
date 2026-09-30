@@ -48,10 +48,9 @@ header.site .wrap {
   display: flex; align-items: center; justify-content: space-between;
   height: 60px;
 }
-.brand { display: inline-flex; align-items: center; gap: 6px; }
+.brand { display: inline-flex; align-items: center; }
 .brand:hover { text-decoration: none; }
-.brand img { height: 26px; width: auto; display: block; }
-.brand img.brand-icon { height: 32px; width: 32px; border-radius: 8px; }
+.brand img { height: 30px; width: auto; display: block; }
 nav.site a {
   color: var(--muted); margin-left: 22px; font-size: 15px; font-weight: 600;
   padding: 12px 2px;
