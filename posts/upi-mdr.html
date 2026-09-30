@@ -79,6 +79,18 @@
       <li>Indian Pay Calculator — <a href="https://www.indianpaycalculator.in/govt-news/upi-mdr-supreme-court-no-stay-october-15-2026" target="_blank" rel="noopener">UPI charge stays on track for 15 October: Supreme Court</a></li>
     </ul>
   </div>
+
+  <div class="share">
+    <span class="lbl">Share this story</span>
+    <a href="https://wa.me/?text=UPI%27s%200.4%25%20MDR%20explained%3A%20what%20the%20Supreme%20Court%20decided%20%E2%80%94%20via%20minvana%20https%3A%2F%2Fminvana.com%2Fposts%2Fupi-mdr.html" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?text=UPI%27s%200.4%25%20MDR%20explained%3A%20what%20the%20Supreme%20Court%20decided%20%E2%80%94%20via%20minvana&url=https%3A%2F%2Fminvana.com%2Fposts%2Fupi-mdr.html" target="_blank" rel="noopener">X</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminvana.com%2Fposts%2Fupi-mdr.html" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy-link" data-url="https://minvana.com/posts/upi-mdr.html">Copy link</button>
+  </div>
+  <nav class="story-nav">
+    <a class="prev" href="voter-list-sir.html"><span class="k">&larr; Newer story</span><span class="t">13 Crore Names Missing from Voter Lists</span></a>
+    <a class="next" href="ai-un-warning.html"><span class="k">Older story &rarr;</span><span class="t">AI's Creators Warned the UN</span></a>
+  </nav>
 </main>
 
 <footer class="site">
@@ -90,6 +102,18 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+document.querySelectorAll('.copy-link').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var u = b.getAttribute('data-url');
+    function done() { b.textContent = 'Copied!'; setTimeout(function(){ b.textContent = 'Copy link'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(u).then(done).catch(done); }
+    else { var t = document.createElement('textarea'); t.value = u; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+  });
+});
+</script>
 
 </body>
 </html>
