@@ -48,11 +48,13 @@ header.site .wrap {
   display: flex; align-items: center; justify-content: space-between;
   height: 60px;
 }
-.brand { display: inline-flex; align-items: center; }
+.brand { display: inline-flex; align-items: center; gap: 10px; }
 .brand:hover { text-decoration: none; }
 .brand img { height: 26px; width: auto; display: block; }
+.brand img.brand-icon { height: 32px; width: 32px; border-radius: 8px; }
 nav.site a {
   color: var(--muted); margin-left: 22px; font-size: 15px; font-weight: 600;
+  padding: 12px 2px;
 }
 nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; }
 
@@ -140,7 +142,7 @@ nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; 
 .card h3 a { color: var(--ink); }
 .card h3 a:hover { color: var(--accent); text-decoration: none; }
 .card p { color: var(--muted); font-size: 15px; flex: 1; }
-.card .read { font-weight: 700; font-size: 14px; }
+.card .read { font-weight: 700; font-size: 14px; display: inline-block; padding: 10px 0; }
 .card .tag-row { display: flex; align-items: center; gap: 10px; }
 
 /* ---------- category tag ---------- */
@@ -256,7 +258,7 @@ footer.site {
   padding: 28px 0 40px; color: var(--muted); font-size: 14px;
 }
 footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
-footer.site a { color: var(--muted); margin-right: 16px; }
+footer.site a { color: var(--muted); margin-right: 16px; display: inline-block; padding: 8px 0; }
 footer.site a:hover { color: var(--accent); }
 footer.site .fbrand img { height: 22px; width: auto; display: block; }
 
