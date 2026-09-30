@@ -282,6 +282,8 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
 .signup .fine { font-size: 13px; color: #9aa3b2; margin: 0; }
 .signup .fine a { color: #fff; font-weight: 600; }
 .signup .note { display: none; color: #ffd166; font-size: 14px; margin: 14px 0 0; }
+.signup .formkit-alert:empty { display: none; }
+.signup .formkit-alert { list-style: none; margin: 0 0 12px; padding: 10px 14px; border-radius: 10px; background: #3a1414; color: #ffb4a2; font-size: 14px; }
 
 /* ---------- share row ---------- */
 .share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 44px 0 8px; padding-top: 28px; border-top: 1px solid var(--line); }
