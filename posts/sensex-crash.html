@@ -70,6 +70,17 @@
       <li>HDFC Sky — <a href="https://hdfcsky.com/news/market-close-report-today-september-28-2026-nifty-sensex-crash-as-oil-spikes-on-middle-east-stalemate" target="_blank" rel="noopener">Market close report: Nifty-Sensex crash as oil spikes on Middle East stalemate</a></li>
     </ul>
   </div>
+
+  <div class="share">
+    <span class="lbl">Share this story</span>
+    <a href="https://wa.me/?text=Sensex%20crashed%201%2C124%20points%20in%20a%20day%3A%20what%20really%20happened%20%E2%80%94%20via%20minvana%20https%3A%2F%2Fminvana.com%2Fposts%2Fsensex-crash.html" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?text=Sensex%20crashed%201%2C124%20points%20in%20a%20day%3A%20what%20really%20happened%20%E2%80%94%20via%20minvana&url=https%3A%2F%2Fminvana.com%2Fposts%2Fsensex-crash.html" target="_blank" rel="noopener">X</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fminvana.com%2Fposts%2Fsensex-crash.html" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy-link" data-url="https://minvana.com/posts/sensex-crash.html">Copy link</button>
+  </div>
+  <nav class="story-nav">
+    <a class="prev" href="panic-selling.html"><span class="k">&larr; Newer story</span><span class="t">Why Investors Panic-Sell at the Bottom</span></a>
+  </nav>
 </main>
 
 <footer class="site">
@@ -81,6 +92,18 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+document.querySelectorAll('.copy-link').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var u = b.getAttribute('data-url');
+    function done() { b.textContent = 'Copied!'; setTimeout(function(){ b.textContent = 'Copy link'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(u).then(done).catch(done); }
+    else { var t = document.createElement('textarea'); t.value = u; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+  });
+});
+</script>
 
 </body>
 </html>
