@@ -30,6 +30,34 @@
   </div>
 </section>
 
+<section class="signup" id="signup">
+  <div class="wrap">
+    <h2>Get your daily minute.</h2>
+    <p class="lead">Three stories. 60 seconds. In your inbox every morning.</p>
+    <!-- Email backend: create a free form at formspree.io and replace YOUR_FORM_ID below -->
+    <form id="minute-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Send me the minute</button>
+    </form>
+    <p class="note" id="signup-note"></p>
+    <p class="fine">Free. Unsubscribe anytime. Prefer video? <a href="https://www.youtube.com/@minvana1" target="_blank" rel="noopener">Follow on YouTube</a>.</p>
+  </div>
+</section>
+<script>
+(function () {
+  var f = document.getElementById('minute-form');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    if (f.action.indexOf('YOUR_FORM_ID') !== -1) {
+      e.preventDefault();
+      var n = document.getElementById('signup-note');
+      n.textContent = 'Email signup opens this week — get the daily minute on YouTube meanwhile.';
+      n.style.display = 'block';
+    }
+  });
+})();
+</script>
+
 <main class="wrap">
 
   <section id="daily" class="daily">
