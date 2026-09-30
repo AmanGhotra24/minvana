@@ -269,20 +269,18 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
   .minute-row { gap: 10px; }
 }
 
-/* ---------- signup band ---------- */
-.signup { background: var(--ink); color: #fff; padding: 60px 20px; text-align: center; }
-.signup h2 { font-size: clamp(24px, 4vw, 32px); letter-spacing: -0.02em; margin: 0 0 8px; }
-.signup p.lead { color: #c7cdd8; margin: 0 0 22px; font-size: 17px; }
-.signup form { display: flex; gap: 10px; justify-content: center; max-width: 480px; margin: 0 auto 14px; }
-.signup input[type="email"] { flex: 1; min-width: 0; padding: 14px 16px; border-radius: 12px; border: 1px solid #3a3a3a; background: #1c1c1c; color: #fff; font-size: 16px; }
-.signup input[type="email"]::placeholder { color: #8a8f98; }
-.signup button { padding: 14px 24px; border-radius: 12px; border: 0; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; cursor: pointer; white-space: nowrap; }
-.signup button:hover { background: var(--accent-deep); }
-.signup .fine { font-size: 13px; color: #9aa3b2; margin: 0; }
-.signup .fine a { color: #fff; font-weight: 600; }
-.signup .note { display: none; color: #ffd166; font-size: 14px; margin: 14px 0 0; }
-.signup .formkit-alert:empty { display: none; }
-.signup .formkit-alert { list-style: none; margin: 0 0 12px; padding: 10px 14px; border-radius: 10px; background: #3a1414; color: #ffb4a2; font-size: 14px; }
+/* ---------- newsletter strip (slim, dismissible) ---------- */
+.nl-strip { position: relative; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 14px; background: #f7f9ff; padding: 12px 44px 12px 18px; margin: 18px 0; font-size: 14px; }
+.nl-strip .nl-text { color: var(--ink); }
+.nl-strip form { display: flex; gap: 8px; flex: 1; min-width: 220px; margin: 0; }
+.nl-strip input[type="email"] { flex: 1; min-width: 0; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); font-size: 14px; font-family: inherit; }
+.nl-strip button[type="submit"] { padding: 10px 18px; border-radius: 10px; border: 0; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap; font-family: inherit; }
+.nl-strip button[type="submit"]:hover { background: var(--accent-deep); }
+.nl-strip .nl-x { position: absolute; top: 4px; right: 6px; border: 0; background: none; color: var(--muted); font-size: 22px; line-height: 1; cursor: pointer; padding: 6px; }
+.nl-strip .nl-x:hover { color: var(--ink); }
+.nl-strip .nl-done { font-weight: 700; color: var(--ink); }
+.nl-strip .formkit-alert:empty { display: none; }
+.nl-strip .formkit-alert { list-style: none; margin: 0; padding: 8px 12px; border-radius: 8px; background: #3a1414; color: #ffb4a2; font-size: 13px; flex-basis: 100%; }
 
 /* ---------- share row ---------- */
 .share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 44px 0 8px; padding-top: 28px; border-top: 1px solid var(--line); }
@@ -299,8 +297,6 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
 .story-nav .t { font-weight: 700; font-size: 16px; line-height: 1.4; }
 
 @media (max-width: 600px) {
-  .signup form { flex-direction: column; }
-  .signup button { width: 100%; }
   .story-nav { flex-direction: column; }
   .story-nav a.next { text-align: left; }
 }
