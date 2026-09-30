@@ -50,7 +50,7 @@ header.site .wrap {
 }
 .brand { display: inline-flex; align-items: center; }
 .brand:hover { text-decoration: none; }
-.brand img { height: 30px; width: auto; display: block; }
+.brand img { height: 40px; width: auto; display: block; }
 nav.site a {
   color: var(--muted); margin-left: 22px; font-size: 15px; font-weight: 600;
   padding: 12px 2px;
