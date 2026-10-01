@@ -69,6 +69,10 @@ nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; 
   margin: 16px auto 0; max-width: 560px;
   font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); font-weight: 500;
 }
+.eyebrow {
+  font-size: 12px; font-weight: 800; letter-spacing: 2.4px;
+  color: var(--accent); text-transform: uppercase;
+}
 .hero .cta { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 .btn {
@@ -303,6 +307,91 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
 .story-nav a.next { text-align: right; }
 .story-nav .k { display: block; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
 .story-nav .t { font-weight: 700; font-size: 16px; line-height: 1.4; }
+
+/* ---------- featured briefing ---------- */
+.feature {
+  border: 1px solid var(--line); border-radius: 20px;
+  padding: 28px; margin: 0 0 8px; background: #fff;
+  display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start;
+}
+.phone {
+  aspect-ratio: 9 / 16; background: #000;
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line);
+  max-width: 300px; width: 100%; margin: 0 auto;
+}
+.phone iframe { width: 100%; height: 100%; border: 0; display: block; }
+.phone-ph {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; color: #9aa3b2; text-align: center; padding: 24px;
+  background: linear-gradient(160deg, #0b0f1a, #1e293b);
+  font-size: 15px;
+}
+.phone-ph-brand { font-size: 13px; font-weight: 800; letter-spacing: 2px; color: #e5e7eb; }
+.feat-body .kicker {
+  font-size: 11px; font-weight: 800; letter-spacing: 1.6px;
+  color: var(--muted); text-transform: uppercase; margin-bottom: 8px;
+}
+.feat-body h2 { font-size: clamp(24px, 3.4vw, 32px); margin-bottom: 10px; }
+.feat-body .dek { color: var(--muted); font-size: 16px; margin-bottom: 18px; }
+.stamps { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.stamp {
+  font-size: 12px; font-weight: 800; letter-spacing: 0.4px;
+  color: #fff; background: var(--accent);
+  padding: 5px 11px; border-radius: 8px; white-space: nowrap;
+}
+.feat-actions { display: flex; gap: 14px; flex-wrap: wrap; font-weight: 700; font-size: 15px; align-items: center; }
+.btn-sm { padding: 10px 22px; font-size: 14px; }
+details.listen summary {
+  cursor: pointer; color: var(--accent); font-weight: 700; font-size: 15px;
+  list-style: none; padding: 10px 0;
+}
+details.listen summary::-webkit-details-marker { display: none; }
+details.listen summary:hover { text-decoration: underline; }
+details.listen audio { width: 100%; margin-top: 6px; }
+@media (max-width: 760px) { .feature { grid-template-columns: 1fr; } }
+
+/* ---------- segments ---------- */
+.seg-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.seg {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; background: #fff;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.seg:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.seg .t {
+  font-size: 11px; font-weight: 800; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+}
+.seg h3 { font-size: 17px; color: var(--ink); margin-bottom: 4px; }
+.seg p { font-size: 13.5px; color: var(--muted); }
+
+.card .row { display: flex; gap: 16px; font-weight: 700; font-size: 14px; }
+
+/* ---------- newsletter band ---------- */
+.nl-band {
+  margin: 56px 0 8px; background: var(--ink); color: #fff;
+  border-radius: 20px; padding: 44px 32px; text-align: center;
+}
+.nl-band h2 { font-size: clamp(24px, 4vw, 34px); margin-bottom: 10px; }
+.nl-band h2 .accent { color: #7aa5ff; }
+.nl-band p { color: #9aa3b2; max-width: 520px; margin: 0 auto 22px; }
+.nl-band form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.nl-band input[type="email"] {
+  padding: 13px 18px; border-radius: 999px; border: 1px solid #333;
+  background: #1c1c1e; color: #fff; font-size: 15px; min-width: 260px; font-family: inherit;
+}
+.nl-band button {
+  padding: 13px 30px; border-radius: 999px; border: 0;
+  background: var(--accent); color: #fff; font-weight: 700; font-size: 15px;
+  cursor: pointer; font-family: inherit;
+}
+.nl-band button:hover { background: var(--accent-deep); }
+.nl-band small { display: block; margin-top: 14px; color: #6b7280; font-size: 12.5px; }
 
 @media (max-width: 600px) {
   .story-nav { flex-direction: column; }
