@@ -268,9 +268,17 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
 @media (max-width: 600px) {
   body { font-size: 16px; }
   .hero { padding: 56px 20px 42px; }
-  nav.site a { margin-left: 14px; }
-  .minute-row .actions { display: none; }
-  .minute-row { gap: 10px; }
+  header.site .wrap { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 10px; row-gap: 4px; }
+  nav.site { display: flex; flex-wrap: wrap; row-gap: 2px; }
+  nav.site a { margin-left: 0; margin-right: 18px; padding: 8px 2px; white-space: nowrap; }
+  .minute-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .minute-row .actions { display: flex; }
+  .nl-band { padding: 36px 22px; }
+  .nl-band form { flex-direction: column; align-items: stretch; }
+  .nl-band input[type="email"] { min-width: 0; width: 100%; }
+  .nl-band button { width: 100%; }
+  .feature { padding: 22px 18px; }
+  .daily { padding: 8px 18px; }
 }
 
 /* ---------- newsletter floating button + popup ---------- */
