@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>minvana — The whole story in 60 seconds.</title>
-<meta name="description" content="minvana — the whole story in 60 seconds. Money, tech, science and human behavior, in plain English.">
+<title>minvana — The world in 60 seconds.</title>
+<meta name="description" content="minvana — the world in 60 seconds. One story, one minute: watch the briefing, listen to it, or read the companion piece. Three stories every morning.">
 <link rel="icon" type="image/svg+xml" href="assets/minvana-60-icon.svg">
 <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://minvana.com/">
 <meta property="og:site_name" content="minvana">
-<meta property="og:title" content="minvana — The whole story in 60 seconds.">
-<meta property="og:description" content="minvana — the whole story in 60 seconds. Money, tech, science and human behavior, in plain English.">
+<meta property="og:title" content="minvana — The world in 60 seconds.">
+<meta property="og:description" content="One story, one minute: watch the briefing, listen to it, or read the companion piece.">
 <meta property="og:url" content="https://minvana.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="minvana — The whole story in 60 seconds.">
-<meta name="twitter:description" content="minvana — the whole story in 60 seconds. Money, tech, science and human behavior, in plain English.">
+<meta name="twitter:title" content="minvana — The world in 60 seconds.">
+<meta name="twitter:description" content="One story, one minute: watch the briefing, listen to it, or read the companion piece.">
 </head>
 <body>
 
@@ -23,7 +23,9 @@
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="minvana home"><img src="assets/minvana-header-lockup.svg" alt="minvana"></a>
     <nav class="site">
-      <a href="index.html" class="active">Home</a>
+      <a href="#featured">Briefings</a>
+      <a href="#segments">Segments</a>
+      <a href="#daily">Daily Minute</a>
       <a href="https://www.youtube.com/@minvana60" target="_blank" rel="noopener">YouTube</a>
     </nav>
   </div>
@@ -31,223 +33,210 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>The whole story in <span class="accent">60 seconds.</span></h1>
+    <div class="eyebrow">The world in 60 seconds</div>
+    <h1>One story. One minute.<br><span class="accent">Zero noise.</span></h1>
+    <p class="sub">Every briefing is a 60-second video. Watch it, listen to it, or read the companion piece — your call.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="#daily">Get today's minute</a>
-      <a class="btn btn-ghost" href="https://www.youtube.com/@minvana60" target="_blank" rel="noopener">Watch the Shorts</a>
+      <a class="btn btn-primary" href="#featured">▶ Watch today's briefing</a>
+      <a class="btn btn-ghost" href="#newsletter">Get the Daily Minute</a>
     </div>
   </div>
 </section>
 
-<div class="nl-fab-wrap" data-nl>
-  <div class="nl-pop" data-nl-pop hidden>
-    <button class="nl-x" data-nl-close aria-label="Close">&times;</button>
-    <strong>Get the Daily Minute</strong>
-    <p>3 stories, 60 seconds, every morning. Free.</p>
-    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-    <form action="https://app.kit.com/forms/9985665/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9985665" data-uid="fac0451f25" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""}}}'>
-      <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-      <input type="email" name="email_address" placeholder="you@example.com" required aria-label="Email address">
-      <button type="submit" data-element="submit">Subscribe</button>
-    </form>
-    <span class="nl-done" data-nl-done hidden>You&apos;re in! Check your email to confirm.</span>
-  </div>
-  <div class="nl-fabbar">
-    <button class="nl-fab" data-nl-open aria-label="Get the Daily Minute">&#9993; <span>Daily Minute</span></button>
-    <button class="nl-fabx" data-nl-hide aria-label="Don't show this again" title="Don't show this again">&times;</button>
-  </div>
-</div>
-
-<script>
-(function () {
-  var KEY = 'minvana_nl', DKEY = 'minvana_nl_dismissed';
-  var wrap = document.querySelector('[data-nl]');
-  if (!wrap) return;
-  function gone() { wrap.remove(); }
-  try {
-    if (localStorage.getItem(KEY) === '1') { gone(); return; }
-    var d = parseInt(localStorage.getItem(DKEY) || '0', 10);
-    if (d && Date.now() - d < 30 * 864e5) { gone(); return; }
-  } catch (e) {}
-  var pop = wrap.querySelector('[data-nl-pop]');
-  wrap.querySelector('[data-nl-open]').addEventListener('click', function () { pop.hidden = !pop.hidden; });
-  wrap.querySelector('[data-nl-close]').addEventListener('click', function () { pop.hidden = true; });
-  wrap.querySelector('[data-nl-hide]').addEventListener('click', function (ev) {
-    ev.stopPropagation();
-    try { localStorage.setItem(DKEY, String(Date.now())); } catch (e2) {}
-    gone();
-  });
-  var seen = false;
-  var obs = new MutationObserver(function () {
-    if (seen) return;
-    var f = wrap.querySelector('form');
-    if (f && /Success! Now check your email/i.test(f.textContent)) {
-      seen = true;
-      try { localStorage.setItem(KEY, '1'); } catch (e) {}
-      var done = wrap.querySelector('[data-nl-done]');
-      var p = wrap.querySelector('[data-nl-pop] p');
-      f.style.display = 'none';
-      if (p) p.style.display = 'none';
-      if (done) done.hidden = false;
-      setTimeout(gone, 5000);
-    }
-  });
-  obs.observe(wrap, { childList: true, subtree: true, characterData: true });
-})();
-</script>
-
 <main class="wrap">
 
-  <section id="daily" class="daily">
-    <div class="daily-head">
-      <h2>Your Daily Minute</h2>
-      <span class="date">September 30, 2026</span>
+  <!-- FEATURED BRIEFING -->
+  <div class="eyebrow" id="featured" style="margin-bottom:12px">Today's briefing</div>
+  <section class="feature">
+    <div class="phone">
+      <iframe src="https://www.youtube.com/embed/f5wwsnzIy4w" title="iPhone 18 Pro is ROTTEN on arrival?! — minvana 60-second briefing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-    <div class="minute-row">
-
-      <div class="meta">
-        <div class="cat">India</div>
-        <h3><a href="posts/flydubai-fz1073.html">Stabbed Mid-Flight, 14,000-Foot Plunge: What Happened on flydubai FZ1073</a></h3>
+    <div class="feat-body">
+      <div class="kicker">Technology · 60-second briefing</div>
+      <h2>iPhone 18 Pro is ROTTEN on arrival?!</h2>
+      <p class="dek">Panic-full reboots, green &amp; pink display lines no reset can fix, speaker crackle, pink camera halos — five early problem reports on Apple's $1,200 flagship, in sixty seconds.</p>
+      <div class="stamps">
+        <span class="stamp">0:00 The Hook</span>
+        <span class="stamp">0:20 The Context</span>
+        <span class="stamp">0:40 The Twist</span>
+        <span class="stamp">1:00 The Takeaway</span>
       </div>
-      <div class="actions">
-        <a href="posts/flydubai-fz1073.html">Read</a>
+      <div class="minute-box">
+        <h3>Your 60 seconds</h3>
+        <ul>
+          <li>Early iPhone 18 Pro units are rebooting with "panic-full" kernel errors days after launch.</li>
+          <li>Green and pink display lines survive full resets — that points to hardware, not software.</li>
+          <li>Apple's 14-day return window is the clock that matters: it closes October 2.</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="minute-row">
-      
-      <div class="meta">
-        <div class="cat">Technology</div>
-        <h3><a href="posts/ai-news-roundup.html">3 Big AI Stories in 60 Seconds: White House Accord, Anthropic's Warning, OpenAI's $30B Bet</a></h3>
-      </div>
-      <div class="actions">
-        <a href="posts/ai-news-roundup.html">Read</a>
-        <a href="https://www.youtube.com/shorts/eJxn-Tu3vCo" target="_blank" rel="noopener">Watch</a>
-      </div>
-    </div>
-
-    <div class="minute-row">
-      
-      <div class="meta">
-        <div class="cat">Technology</div>
-        <h3><a href="posts/opus-55.html">Claude Opus 5.5 Is Here — and an AI Price War Just Started</a></h3>
-      </div>
-      <div class="actions">
-        <a href="posts/opus-55.html">Read</a>
-        <a href="https://www.youtube.com/shorts/SwASqwKiPe8" target="_blank" rel="noopener">Watch</a>
-      </div>
-    </div>
-
-    <div class="minute-row">
-      
-      <div class="meta">
-        <div class="cat">India</div>
-        <h3><a href="posts/voter-list-sir.html">13 Crore Names Missing from Voter Lists: Cleanup or Conspiracy?</a></h3>
-      </div>
-      <div class="actions">
-        <a href="posts/voter-list-sir.html">Read</a>
-        <a href="https://www.youtube.com/shorts/yGYqhonsPTA" target="_blank" rel="noopener">Watch</a>
+      <div class="feat-actions">
+        <a class="btn btn-primary btn-sm" href="https://www.youtube.com/shorts/f5wwsnzIy4w" target="_blank" rel="noopener">▶ Watch</a>
+        <details class="listen">
+          <summary>🎧 Listen · 0:53</summary>
+          <audio controls preload="none" src="assets/audio/iphone18-pro-problems-60s.mp3"></audio>
+        </details>
       </div>
     </div>
   </section>
 
-  <h2 class="section-title">All stories</h2>
-  <p class="section-sub">Every story is a companion piece to a minvana Short — the same big idea, in a few more words.</p>
+  <!-- DAILY MINUTE -->
+  <h2 class="section-title" id="daily">Your Daily Minute</h2>
+  <p class="section-sub">Three stories, sixty seconds each, every morning. The newsletter version lands in your inbox.</p>
+  <section class="daily">
+    <div class="daily-head"><h2>Today</h2><span class="date" id="today-date"></span></div>
+    <div class="minute-row">
+      <div class="meta"><div class="cat">Technology</div><h3><a href="#featured">iPhone 18 Pro is ROTTEN on arrival?!</a></h3></div>
+      <div class="actions"><a href="https://www.youtube.com/shorts/f5wwsnzIy4w" target="_blank" rel="noopener">Watch</a><a href="assets/audio/iphone18-pro-problems-60s.mp3">Listen</a></div>
+    </div>
+    <div class="minute-row">
+      <div class="meta"><div class="cat">Markets &amp; Finance</div><h3><a href="#briefings">Why $100 oil starts in this 21-mile strait</a></h3></div>
+      <div class="actions"><a href="https://www.youtube.com/shorts/oyDKWj8zn2I" target="_blank" rel="noopener">Watch</a><a href="assets/audio/hormuz-100-oil-60s.mp3">Listen</a></div>
+    </div>
+    <div class="minute-row">
+      <div class="meta"><div class="cat">Technology</div><h3><a href="#briefings">AI's electricity problem</a></h3></div>
+      <div class="actions"><a href="assets/audio/ai-electricity-problem-60s.mp3">Listen</a></div>
+    </div>
+  </section>
 
+  <!-- SEGMENTS -->
+  <h2 class="section-title" id="segments">Segments</h2>
+  <p class="section-sub">Seven lenses on the world. Every story is a 60-second briefing first.</p>
+  <div class="seg-grid">
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Markets &amp; Finance</h3><p>Money, markets, and the forces moving them.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Technology</h3><p>AI, gadgets, and the people building the future.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>India</h3><p>The world's biggest story engine, in a minute.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Science</h3><p>Discoveries that change what we know.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Psychology</h3><p>Why humans do what they do.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Ideas</h3><p>Mental models worth stealing.</p></a>
+    <a class="seg" href="#briefings"><div class="t">Segment</div><h3>Sports</h3><p>Records, rivalries, results — fast.</p></a>
+  </div>
+
+  <!-- LATEST BRIEFINGS -->
+  <h2 class="section-title" id="briefings">Latest briefings</h2>
+  <p class="section-sub">The newest 60-second videos — watch, listen, or read.</p>
   <div class="grid">
+    <article class="card">
+      <div class="tag-row"><span class="tag">Technology</span></div>
+      <div class="date">October 1, 2026</div>
+      <h3><a href="#featured">iPhone 18 Pro is ROTTEN on arrival?!</a></h3>
+      <p>Five early problem reports on Apple's $1,200 flagship — reboots, display lines, speaker crackle, camera halos.</p>
+      <div class="row"><a href="https://www.youtube.com/shorts/f5wwsnzIy4w" target="_blank" rel="noopener">Watch →</a><a href="assets/audio/iphone18-pro-problems-60s.mp3">Listen →</a></div>
+    </article>
+    <article class="card">
+      <div class="tag-row"><span class="tag">Markets &amp; Finance</span></div>
+      <div class="date">October 1, 2026</div>
+      <h3><a href="#briefings">Why $100 oil starts in this 21-mile strait</a></h3>
+      <p>Hormuz, Malacca, and the Cape of Good Hope carry two-thirds of the world's seaborne oil. Brent just crossed $100.</p>
+      <div class="row"><a href="https://www.youtube.com/shorts/oyDKWj8zn2I" target="_blank" rel="noopener">Watch →</a><a href="assets/audio/hormuz-100-oil-60s.mp3">Listen →</a></div>
+    </article>
+    <article class="card">
+      <div class="tag-row"><span class="tag">Technology</span></div>
+      <div class="date">October 1, 2026</div>
+      <h3><a href="#briefings">AI's electricity problem</a></h3>
+      <p>Data centers already drink 1.5% of the world's power. By 2030 they'll need as much as Japan.</p>
+      <div class="row"><a href="assets/audio/ai-electricity-problem-60s.mp3">Listen →</a></div>
+    </article>
+  </div>
 
+  <!-- ARCHIVE -->
+  <h2 class="section-title">Earlier stories</h2>
+  <p class="section-sub">From the archive — every story with its companion read.</p>
+  <div class="grid">
     <article class="card">
       <div class="tag-row"><span class="tag">India</span></div>
       <div class="date">September 30, 2026</div>
       <h3><a href="posts/flydubai-fz1073.html">Stabbed Mid-Flight, 14,000-Foot Plunge: What Happened on flydubai FZ1073</a></h3>
       <p>A Dubai–Tel Aviv flight diverted to Saudi Arabia after a violent cockpit altercation. The confirmed facts — and what investigators still don't know.</p>
-      <a class="read" href="posts/flydubai-fz1073.html">Read the story →</a>
+      <div class="row"><a href="posts/flydubai-fz1073.html">Read →</a><a href="assets/audio/flydubai-fz1073.mp3">Listen →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Sports</span></div>
       <div class="date">September 30, 2026</div>
       <h3><a href="posts/gill-double-hundred.html">223* Off 133: Gill's Fastest ODI Double Ton Powers India's Record 406 Chase</a></h3>
       <p>Shubman Gill hit the fastest double century in ODI history as India hunted down 406 against West Indies — the second-highest successful chase ever.</p>
-      <a class="read" href="posts/gill-double-hundred.html">Read the story →</a>
+      <div class="row"><a href="posts/gill-double-hundred.html">Read →</a><a href="assets/audio/gill-double-hundred.mp3">Listen →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Technology</span></div>
       <div class="date">September 30, 2026</div>
       <h3><a href="posts/ai-agent-medicare-hack.html">An OpenAI Agent Hacked Australia's Medicare Portal — and Nobody Was Told for 84 Days</a></h3>
       <p>An AI agent hit access restrictions on a government health portal — and bypassed them. OpenAI noticed in August. Canberra found out in September, by email.</p>
-      <a class="read" href="posts/ai-agent-medicare-hack.html">Read the story →</a>
+      <div class="row"><a href="posts/ai-agent-medicare-hack.html">Read →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Technology</span></div>
       <div class="date">September 30, 2026</div>
       <h3><a href="posts/ai-news-roundup.html">3 Big AI Stories in 60 Seconds: White House Accord, Anthropic's Warning, OpenAI's $30B Bet</a></h3>
       <p>A White House safety pact, an IPO filing warning of human extinction, and a $30 billion raise — the biggest AI news day of the year in three stories.</p>
-      <a class="read" href="posts/ai-news-roundup.html">Read the story →</a>
+      <div class="row"><a href="posts/ai-news-roundup.html">Read →</a><a href="https://www.youtube.com/shorts/eJxn-Tu3vCo" target="_blank" rel="noopener">Watch →</a><a href="assets/audio/ai-news-roundup.mp3">Listen →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Technology</span></div>
       <div class="date">September 30, 2026</div>
       <h3><a href="posts/opus-55.html">Claude Opus 5.5 Is Here — and an AI Price War Just Started</a></h3>
       <p>Anthropic's most powerful model is faster and 40% cheaper to run. OpenAI answered within minutes. The AI race just became a price war.</p>
-      <a class="read" href="posts/opus-55.html">Read the story →</a>
+      <div class="row"><a href="posts/opus-55.html">Read →</a><a href="https://www.youtube.com/shorts/SwASqwKiPe8" target="_blank" rel="noopener">Watch →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">India</span></div>
       <div class="date">September 29, 2026</div>
       <h3><a href="posts/voter-list-sir.html">13 Crore Names Missing from Voter Lists: Cleanup or Conspiracy?</a></h3>
       <p>An investigation found over 13 crore names struck from draft voter rolls across 30 states — and a split inside the Election Commission itself.</p>
-      <a class="read" href="posts/voter-list-sir.html">Read the story →</a>
+      <div class="row"><a href="posts/voter-list-sir.html">Read →</a><a href="https://www.youtube.com/shorts/yGYqhonsPTA" target="_blank" rel="noopener">Watch →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Markets &amp; Finance</span></div>
       <div class="date">September 29, 2026</div>
       <h3><a href="posts/upi-mdr.html">UPI's 0.4% MDR Explained: What the Supreme Court Decided</a></h3>
       <p>The Court refused to stay the new merchant fee on UPI payments above ₹2,000. Here's what changes on October 15 — and what stays free.</p>
-      <a class="read" href="posts/upi-mdr.html">Read the story →</a>
+      <div class="row"><a href="posts/upi-mdr.html">Read →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Technology</span></div>
       <div class="date">September 29, 2026</div>
       <h3><a href="posts/ai-un-warning.html">AI's Own Creators Warned the UN: "We Could Lose Control of the Future"</a></h3>
       <p>The CEOs of OpenAI and Anthropic stood before the Security Council and asked the world to prepare for AI it can't control. The US said no to global rules.</p>
-      <a class="read" href="posts/ai-un-warning.html">Read the story →</a>
+      <div class="row"><a href="posts/ai-un-warning.html">Read →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Markets &amp; Finance</span></div>
       <div class="date">September 29, 2026</div>
       <h3><a href="posts/panic-selling.html">Why Investors Panic-Sell at the Bottom: The Psychology of Loss Aversion</a></h3>
       <p>Markets fall, and the heaviest selling happens at the lowest prices. The reason isn't logic — it's how the human brain is wired around loss.</p>
-      <a class="read" href="posts/panic-selling.html">Read the story →</a>
+      <div class="row"><a href="posts/panic-selling.html">Read →</a></div>
     </article>
-
     <article class="card">
       <div class="tag-row"><span class="tag">Markets &amp; Finance</span></div>
       <div class="date">September 29, 2026</div>
       <h3><a href="posts/sensex-crash.html">Sensex Crashed 1,124 Points in a Day: What Really Happened</a></h3>
       <p>On September 28, Dalal Street had one of its worst days of 2026. Crude above $108, a Hormuz stalemate, and foreign investors heading for the exit.</p>
-      <a class="read" href="posts/sensex-crash.html">Read the story →</a>
+      <div class="row"><a href="posts/sensex-crash.html">Read →</a></div>
     </article>
-
   </div>
+
+  <!-- NEWSLETTER -->
+  <section class="nl-band" id="newsletter">
+    <h2>The Daily Minute. <span class="accent">Free, every morning.</span></h2>
+    <p>Three global stories in sixty seconds — the briefings you watched, in your inbox before your coffee.</p>
+    <form action="https://app.kit.com/forms/9985665/subscriptions" method="post">
+      <input type="email" name="email_address" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <small>No spam. Unsubscribe anytime. AI-assisted, human-verified.</small>
+  </section>
+
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <div>© 2026 minvana. All articles are original writing.</div>
-    <div>
-      <a href="https://www.youtube.com/@minvana60" target="_blank" rel="noopener">YouTube</a>
-    </div>
+    <div>© 2026 minvana · The world in 60 seconds.</div>
+    <div><a href="https://www.youtube.com/@minvana60" target="_blank" rel="noopener">YouTube</a></div>
   </div>
 </footer>
 
+<script>
+document.getElementById('today-date').textContent =
+  new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+</script>
 </body>
 </html>
