@@ -56,6 +56,18 @@ nav.site a {
   padding: 12px 2px;
 }
 nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; }
+.nav-toggle {
+  display: none; border: 0; background: transparent; cursor: pointer;
+  width: 44px; height: 44px; padding: 11px;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--ink); transition: transform .2s ease, opacity .2s ease;
+}
+header.site.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+header.site.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+header.site.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- hero ---------- */
 .hero { text-align: center; padding: 72px 20px 54px; }
@@ -268,9 +280,18 @@ footer.site .fbrand img { height: 22px; width: auto; display: block; }
 @media (max-width: 600px) {
   body { font-size: 16px; }
   .hero { padding: 56px 20px 42px; }
-  header.site .wrap { flex-wrap: wrap; height: auto; padding-top: 10px; padding-bottom: 10px; row-gap: 4px; }
-  nav.site { display: flex; flex-wrap: wrap; row-gap: 2px; }
-  nav.site a { margin-left: 0; margin-right: 18px; padding: 8px 2px; white-space: nowrap; }
+  header.site .wrap { flex-wrap: nowrap; height: 60px; padding-top: 0; padding-bottom: 0; }
+  .nav-toggle { display: inline-flex; }
+  nav.site {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #ffffff; border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 28px rgba(0,0,0,.10);
+    flex-direction: column; padding: 6px 20px 14px;
+  }
+  header.site.nav-open nav.site { display: flex; }
+  nav.site a { margin: 0; padding: 13px 2px; white-space: nowrap; border-top: 1px solid var(--line); font-size: 16px; }
+  nav.site a:first-child { border-top: 0; }
   .minute-row { flex-direction: column; align-items: flex-start; gap: 8px; }
   .minute-row .actions { display: flex; }
   .nl-band { padding: 36px 22px; }
