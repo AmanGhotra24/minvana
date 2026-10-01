@@ -22,7 +22,10 @@
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="minvana home"><img src="assets/minvana-header-lockup.svg" alt="minvana"></a>
-    <nav class="site">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site" id="primary-nav">
       <a href="#featured">Briefings</a>
       <a href="#segments">Segments</a>
       <a href="#daily">Daily Minute</a>
@@ -237,6 +240,31 @@
 <script>
 document.getElementById('today-date').textContent =
   new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+
+// Hamburger menu (small screens)
+(function () {
+  var header = document.querySelector('header.site');
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (!header || !btn || !nav) return;
+  function setOpen(open) {
+    header.classList.toggle('nav-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.addEventListener('click', function () {
+    setOpen(!header.classList.contains('nav-open'));
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 600) setOpen(false);
+  });
+})();
 </script>
 </body>
 </html>
