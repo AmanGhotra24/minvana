@@ -126,7 +126,7 @@ nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; 
 
 .grid {
   display: grid; gap: 18px;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(290px, 100%), 1fr));
   padding-bottom: 12px;
 }
 .card {
@@ -231,7 +231,7 @@ nav.site a:hover, nav.site a.active { color: var(--ink); text-decoration: none; 
 /* ---------- categories ---------- */
 .categories {
   display: grid; gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   padding-bottom: 40px;
 }
 .category {
