@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Minvana Minute</title>
+<link>https://minvana.com</link>
+<description>60-second explainers. History, money, science — the world in a minute.</description>
+<language>en</language>
+<itunes:author>Minvana</itunes:author>
+<itunes:summary>60-second explainers. History, money, science — the world in a minute.</itunes:summary>
+<itunes:owner>
+<itunes:name>Minvana</itunes:name>
+<itunes:email>itsnavyasahni@gmail.com</itunes:email>
+</itunes:owner>
+<itunes:image href="https://minvana.com/assets/podcast-cover.jpg"/>
+<itunes:category text="News"/>
+<itunes:category text="Education"/>
+<itunes:explicit>false</itunes:explicit>
+<itunes:type>episodic</itunes:type>
+
+<item>
+<title>Why $100 Oil Starts in the Strait of Hormuz</title>
+<description>One 21-mile strait, and the world's oil price. Explained in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 12:43:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/hormuz-100-oil-60s.mp3" length="681872" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/hormuz-100-oil-60s.mp3</guid>
+<itunes:duration>56</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+<item>
+<title>iPhone 18 Pro: 5 Shocking Problems</title>
+<description>Five problems with the iPhone 18 Pro, in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 12:30:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/iphone18-pro-problems-60s.mp3" length="641435" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/iphone18-pro-problems-60s.mp3</guid>
+<itunes:duration>53</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+<item>
+<title>flydubai FZ1073: What Happened at 14,000 Feet</title>
+<description>The shocking flydubai FZ1073 incident, explained in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 10:15:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/flydubai-fz1073.mp3" length="829133" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/flydubai-fz1073.mp3</guid>
+<itunes:duration>51</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+<item>
+<title>AI News Roundup: 3 Big Stories</title>
+<description>Three big AI stories, in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 10:05:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/ai-news-roundup.mp3" length="787629" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/ai-news-roundup.mp3</guid>
+<itunes:duration>49</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+<item>
+<title>Gill's 223: The Fastest ODI Double Hundred</title>
+<description>Shubman Gill's record-breaking double hundred, in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 10:00:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/gill-double-hundred.mp3" length="283813" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/gill-double-hundred.mp3</guid>
+<itunes:duration>35</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+<item>
+<title>AI's Electricity Problem</title>
+<description>Why AI's biggest bottleneck might be electricity, in 60 seconds.</description>
+<pubDate>Wed, 01 Oct 2026 09:55:00 +0000</pubDate>
+<enclosure url="https://minvana.com/assets/audio/ai-electricity-problem-60s.mp3" length="259629" type="audio/mpeg"/>
+<guid>https://minvana.com/assets/audio/ai-electricity-problem-60s.mp3</guid>
+<itunes:duration>21</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+</item>
+
+</channel>
+</rss>
