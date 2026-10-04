@@ -398,6 +398,9 @@ details.listen audio { width: 100%; margin-top: 6px; }
 }
 .seg h3 { font-size: 17px; color: var(--ink); margin-bottom: 4px; }
 .seg p { font-size: 13.5px; color: var(--muted); }
+.seg .go { margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--accent); }
+.feat-follow { margin-top: 14px; font-size: 14px; font-weight: 600; }
+.feat-follow a { color: var(--accent); }
 
 .card .row { display: flex; gap: 16px; font-weight: 700; font-size: 14px; }
 
@@ -410,8 +413,7 @@ details.listen audio { width: 100%; margin-top: 6px; }
 .nl-band h2 .accent { color: #7aa5ff; }
 .nl-band p { color: #9aa3b2; max-width: 520px; margin: 0 auto 22px; }
 .nl-band form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.nl-band input[type="email"] {
-  padding: 13px 18px; border-radius: 999px; border: 1px solid #333;
+.nl-band input[type="email"] {  padding: 13px 18px; border-radius: 999px; border: 1px solid #333;
   background: #1c1c1e; color: #fff; font-size: 15px; min-width: 260px; font-family: inherit;
 }
 .nl-band button {
@@ -421,6 +423,8 @@ details.listen audio { width: 100%; margin-top: 6px; }
 }
 .nl-band button:hover { background: var(--accent-deep); }
 .nl-band small { display: block; margin-top: 14px; color: #6b7280; font-size: 12.5px; }
+.nl-band .alt { margin: 12px auto 0; font-size: 14px; color: #9aa3b2; max-width: 520px; }
+.nl-band .alt a { color: #7aa5ff; font-weight: 700; }
 
 @media (max-width: 600px) {
   .story-nav { flex-direction: column; }
